@@ -116,8 +116,12 @@ export default class Label extends PureComponent {
             inputRange: [0, 1],
             outputRange: [
               x0,
-              -(this.state.labelWidth - minWidthOfItem) / 2 -
-                0.04 * this.state.labelWidth,
+              Platform.select({
+                default: x1,
+                web:
+                  -(this.state.labelWidth - minWidthOfItem) / 2 -
+                  0.04 * this.state.labelWidth,
+              }),
             ],
           }),
         },
