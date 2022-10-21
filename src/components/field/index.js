@@ -666,6 +666,8 @@ export default class TextField extends PureComponent {
       disabledLineType,
     };
 
+    return this.renderInput();
+
     return (
       <View {...containerProps}>
         <Animated.View {...inputContainerProps}>
