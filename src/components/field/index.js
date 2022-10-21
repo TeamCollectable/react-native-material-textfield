@@ -666,7 +666,11 @@ export default class TextField extends PureComponent {
       disabledLineType,
     };
 
-    return this.renderInput();
+    return (
+      <View {...containerProps} style={{ backgroundColor: "red" }}>
+        {this.renderInput()}
+      </View>
+    );
 
     return (
       <View {...containerProps}>
